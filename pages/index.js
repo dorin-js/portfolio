@@ -4,6 +4,7 @@ import Image from "next/image";
 import Layout from "../components/Layout";
 import ProfilePic from "../assets/profile_promo.jpeg";
 import TechStack from "../components/TechStack";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,40 +15,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
-        <Layout>
+      <Layout>
+        <main className="main">
           <section className="intro">
             <div className="about-intro">
               <h1 className="name">Dorin Ilușca</h1>
               <h4 className="subname">I build things for the web</h4>
-              <p>
+              <p className="description">
                 I'm a web developer specializing in building user interfaces.
+                Currently, looking for a role in established IT company with the
+                opportunity to work with the latest technologies.
               </p>
             </div>
-            <Image
-              className="profile-pic"
-              src={ProfilePic}
-              alt="Picture of author"
-              width={150}
-              height={150}
-            />
+            <div className="profile-pic-wrap">
+              <Image
+                className="profile-pic"
+                src={ProfilePic}
+                alt="Picture of author"
+                width={150}
+                height={150}
+              />
+            </div>
           </section>
           <TechStack />
-        </Layout>
-      </main>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+          <Link href="/projects">
+            <a className="browse-pr">Browse my projects </a>
+          </Link>
+        </main>
+      </Layout>
     </>
   );
 }

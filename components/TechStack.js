@@ -2,29 +2,46 @@ import React, { forwardRef } from "react";
 import { SiReact } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
-import { SiStyledcomponents } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
-import Tippy from "@tippyjs/react/headless";
+import { Tooltip } from "@mantine/core";
 
-const ThisWillWork = forwardRef((props, ref) => {
-  return <button ref={ref}>Reference</button>;
-});
+const MyComponent = forwardRef((props, ref) => (
+  <div ref={ref} {...props}>
+    {props.children}
+  </div>
+));
 
 function TechStack() {
   return (
-    <section className="teck-stack">
-      <h3>I've been working with:</h3>
+    <section className="tech-st">
+      <span>I've been working with:</span>
       <div className="tech-wrap">
-        <Tippy content="Tooltip">
-          <ThisWillWork />
-        </Tippy>
-        <DiJavascript1 />
-        <SiReact />
-        <SiRedux />
-        <SiTypescript />
-        <SiNextdotjs />
-        <SiStyledcomponents />
+        <Tooltip label="Javascript" position="bottom">
+          <MyComponent>
+            <DiJavascript1 className="tech-icon" />
+          </MyComponent>
+        </Tooltip>
+        <Tooltip label="React" position="bottom">
+          <MyComponent>
+            <SiReact className="tech-icon" />
+          </MyComponent>
+        </Tooltip>
+        <Tooltip label="Redux" position="bottom">
+          <MyComponent>
+            <SiRedux className="tech-icon" />
+          </MyComponent>
+        </Tooltip>
+        <Tooltip label="Typescript" position="bottom">
+          <MyComponent>
+            <SiTypescript className="tech-icon" />
+          </MyComponent>
+        </Tooltip>
+        <Tooltip label="Next.js" position="bottom">
+          <MyComponent>
+            <SiNextdotjs className="tech-icon" />
+          </MyComponent>
+        </Tooltip>
       </div>
     </section>
   );

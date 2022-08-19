@@ -1,39 +1,47 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { RiFacebookBoxFill } from "react-icons/ri";
-import { RiFacebookBoxLine } from "react-icons/ri";
+import { RiFacebookCircleFill } from "react-icons/ri";
+import { RiFacebookCircleLine } from "react-icons/ri";
 import { RiGithubLine } from "react-icons/ri";
 import { RiGithubFill } from "react-icons/ri";
 import { RiMoonLine } from "react-icons/ri";
 import { RiMoonFill } from "react-icons/ri";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   const [hovered, setHovered] = useState(false);
+  const router = useRouter();
   return (
     <div className="layout">
       <nav className="navbar">
         <div className="main-menu">
           <Link href="/">
-            <a className="nav-link active-link">Home</a>
+            <a
+              className={
+                router.pathname == "/" ? "nav-link active-link" : "nav-link"
+              }
+            >
+              Home
+            </a>
           </Link>
           <Link href="/projects">
-            <a className="nav-link">Projects</a>
+            <a
+              className={
+                router.pathname == "/projects"
+                  ? "nav-link active-link"
+                  : "nav-link"
+              }
+            >
+              Projects
+            </a>
           </Link>
-          <Link href="/cv">
-            <a className="nav-link">CV</a>
+          <Link href="/CV-3.pdf">
+            <a className="nav-link" target="_blank">
+              CV
+            </a>
           </Link>
         </div>
         <div className="additional-menu">
-          <Link href="https://facebook.com/dorin.ilusca">
-            <a className="nav-socials" target="_blank">
-              <RiFacebookBoxLine />
-            </a>
-          </Link>
-          <Link href="https://github.com/dorin-js">
-            <a className="nav-socials" target="_blank">
-              <RiGithubLine />
-            </a>
-          </Link>
           <button
             className="nav-socials"
             onMouseEnter={() => {
@@ -48,6 +56,25 @@ const Layout = ({ children }) => {
         </div>
       </nav>
       {children}
+      <footer className="footer">
+        <a
+          href="https://facebook.com/dorin.ilusca"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <RiFacebookCircleLine />
+        </a>
+        <a
+          href="https://github.com/dorin-js"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <RiGithubLine />
+        </a>
+        <a className="email" href="mailto: dorin.ilusca@hotmail.com">
+          Send Email
+        </a>
+      </footer>
     </div>
   );
 };
