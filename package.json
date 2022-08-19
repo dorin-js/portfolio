@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@mantine/core": "^5.2.0",
+    "@mantine/hooks": "^5.2.0",
+    "@tippyjs/react": "^4.2.6",
+    "i": "^0.3.7",
     "next": "12.2.5",
+    "npm": "^8.18.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
