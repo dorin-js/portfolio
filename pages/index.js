@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import ProfilePic from "../assets/profile_promo.jpeg";
 import TechStack from "../components/TechStack";
 import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           </section>
           <TechStack />
           <Link href="/projects">
-            <a className="browse-pr">Browse my projects </a>
+            <a className="browse-pr">Browse my projects</a>
           </Link>
         </main>
       </Layout>
