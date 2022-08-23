@@ -24,7 +24,7 @@ function TechStack() {
         <Tooltip
           label="HTML"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -35,7 +35,7 @@ function TechStack() {
         <Tooltip
           label="CSS"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -46,7 +46,7 @@ function TechStack() {
         <Tooltip
           label="Sass/Scss"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -57,7 +57,7 @@ function TechStack() {
         <Tooltip
           label="Javascript"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -68,7 +68,7 @@ function TechStack() {
         <Tooltip
           label="React"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -79,7 +79,7 @@ function TechStack() {
         <Tooltip
           label="Redux"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -90,7 +90,7 @@ function TechStack() {
         <Tooltip
           label="Typescript"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>
@@ -101,7 +101,7 @@ function TechStack() {
         <Tooltip
           label="Next.js"
           position="bottom"
-          events={{ hover: true, focus: true, touch: false }}
+          events={{ hover: true, focus: true, touch: true }}
         >
           <MyComponent tabIndex={0}>
             <Boop rotation={0} timing={200} y={-5}>

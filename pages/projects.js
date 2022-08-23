@@ -7,6 +7,7 @@ function Projects() {
   const projects = [
     {
       title: "Snippets app",
+      previewVid: "snipp.mp4",
       links: {
         git: "https://github.com/dorin-js/mycode-snippets",
         live: "https://mcsa.vercel.app/",
@@ -25,6 +26,7 @@ function Projects() {
     },
     {
       title: "Ecommerce shop",
+      previewVid: "gmail-speed.mp4",
       links: {
         git: "https://github.com/dorin-js/react-ecommerce",
         live: "https://react-ecom-eight.vercel.app/",
