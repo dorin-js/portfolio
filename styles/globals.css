@@ -149,8 +149,8 @@ h6 {
 .browse-pr {
   color: rgb(84, 84, 84);
 }
-.email {
-  font-size: 1rem;
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;

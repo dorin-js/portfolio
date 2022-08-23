@@ -1,11 +1,30 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import { RoughNotation } from "react-rough-notation";
+import { animated } from "react-spring";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import Layout from "../components/Layout";
 import ProfilePic from "../assets/profile_promo.jpeg";
 import TechStack from "../components/TechStack";
-import Link from "next/link";
-import { RoughNotation } from "react-rough-notation";
+import useBoop from "../hooks/useBoop";
+
+function AnimatedCaretLink(props) {
+  const [style, trigger] = useBoop({ x: 7 });
+  return (
+    <Link href="/projects" className="flex">
+      <a className="browse-pr inline-block" onMouseEnter={trigger}>
+        <div style={{ width: "100%" }} className="flex">
+          <span>Browse my projects</span>{" "}
+          <animated.span className="inline-block" style={style}>
+            <MdOutlineKeyboardArrowRight />
+          </animated.span>
+        </div>
+      </a>
+    </Link>
+  );
+}
 
 export default function Home() {
   return (
@@ -23,9 +42,49 @@ export default function Home() {
               <h1 className="name">Dorin Ilușca</h1>
               <h4 className="subname">I build things for the web</h4>
               <p className="description">
-                I'm a web developer specializing in building user interfaces.
-                Currently, looking for a role in established IT company with the
-                opportunity to work with the latest technologies.
+                I'm a{" "}
+                <RoughNotation
+                  type="highlight"
+                  iterations={1}
+                  animationDuration={350}
+                  color="rgba(10, 10, 10, 0.1)"
+                  show={true}
+                >
+                  Web Developer
+                </RoughNotation>{" "}
+                specializing in{" "}
+                <RoughNotation
+                  type="highlight"
+                  iterations={1}
+                  color="rgba(10, 10, 10, 0.1)"
+                  animationDelay={450}
+                  animationDuration={350}
+                  show={true}
+                >
+                  building user interfaces.
+                </RoughNotation>
+                Currently,{" "}
+                <RoughNotation
+                  type="highlight"
+                  iterations={1}
+                  color="rgba(10, 10, 10, 0.1)"
+                  animationDelay={900}
+                  animationDuration={350}
+                  show={true}
+                >
+                  looking for a role
+                </RoughNotation>{" "}
+                in established IT company with the opportunity to work with the{" "}
+                <RoughNotation
+                  type="highlight"
+                  iterations={1}
+                  color="rgba(10, 10, 10, 0.1)"
+                  animationDelay={1200}
+                  animationDuration={350}
+                  show={true}
+                >
+                  latest technologies.
+                </RoughNotation>
               </p>
             </div>
             <div className="profile-pic-wrap">
@@ -39,9 +98,8 @@ export default function Home() {
             </div>
           </section>
           <TechStack />
-          <Link href="/projects">
-            <a className="browse-pr">Browse my projects</a>
-          </Link>
+
+          <AnimatedCaretLink />
         </main>
       </Layout>
     </>

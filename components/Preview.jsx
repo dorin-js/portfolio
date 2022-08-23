@@ -5,58 +5,58 @@ import { Tooltip } from "@mantine/core";
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 
-const Preview = () => {
+const Preview = ({ projects }) => {
   return (
-    <div className="preview">
-      <div className="flex">
-        <h2 style={{ marginBottom: "1.5rem" }}>Gmail clone</h2>
-        <div className="flex" style={{ marginLeft: "auto" }}>
-          <span style={{ marginRight: "1rem" }}>
-            <Tooltip label="Live Demo">
-              <ActionIcon
-                component="a"
-                variant="subtle"
-                color="dark"
-                href="https://clone-42297.web.app/"
-                target="_blank"
-              >
-                <FiExternalLink />
-              </ActionIcon>
-            </Tooltip>
-          </span>
-          <span>
-            <Tooltip label="Source code">
-              <ActionIcon
-                component="a"
-                variant="subtle"
-                color="dark"
-                href="https://github.com/dorin-js/gmail-clone"
-                target="_blank"
-              >
-                <BsGithub />
-              </ActionIcon>
-            </Tooltip>
-          </span>
+    <>
+      {projects.map((pr) => (
+        <div className="preview" key={pr.title}>
+          <div className="flex" style={{ marginBottom: "1.5rem" }}>
+            <h2>{pr.title}</h2>
+            <div className="flex" style={{ marginLeft: "auto" }}>
+              <span style={{ marginRight: "1rem" }}>
+                <Tooltip label="Live Demo">
+                  <ActionIcon
+                    component="a"
+                    variant="subtle"
+                    color="dark"
+                    href={`${pr.links.live}`}
+                    target="_blank"
+                  >
+                    <FiExternalLink />
+                  </ActionIcon>
+                </Tooltip>
+              </span>
+              <span>
+                <Tooltip label="Source code">
+                  <ActionIcon
+                    component="a"
+                    variant="subtle"
+                    color="dark"
+                    href={`${pr.links.git}`}
+                    target="_blank"
+                  >
+                    <BsGithub />
+                  </ActionIcon>
+                </Tooltip>
+              </span>
+            </div>
+          </div>
+          <video width="800" autoPlay muted loop>
+            <source src="gmail-speed.mp4" type="video/mp4" />
+          </video>
+          <h3 style={{ margin: "1.2rem 0 0.8rem 0" }}>
+            Built with: {pr.stack}
+          </h3>
+          <p>{pr?.description}</p>
+          <span>Functionality:</span>
+          <ul>
+            {pr.functionality.map((func) => (
+              <li>{func}</li>
+            ))}
+          </ul>
         </div>
-      </div>
-      <video width="800" autoPlay muted loop>
-        <source src="gmail-speed.mp4" type="video/mp4" />
-      </video>
-      <h3 style={{ marginTop: "1rem" }}>
-        Built with React, Redux, Firebase, Material UI
-      </h3>
-      <p>
-        A gmail-like app, simulate email sending, with data storage in real time
-        database.
-      </p>
-      <span>Functionality:</span>
-      <ul>
-        <li>Create </li>
-        <li>Read</li>
-        <li>Delete</li>
-        <li>Google Log In</li>
-      </ul>
-    </div>
+      ))}
+    </>
   );
 };
 

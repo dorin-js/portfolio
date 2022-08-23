@@ -3,11 +3,13 @@ import Link from "next/link";
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { RiGithubLine } from "react-icons/ri";
+import { SiMinutemailer } from "react-icons/si";
 import { RiGithubFill } from "react-icons/ri";
 import { RiMoonLine } from "react-icons/ri";
 import { RiMoonFill } from "react-icons/ri";
 import { useRouter } from "next/router";
 import { RoughNotation } from "react-rough-notation";
+import Boop from "./Boop";
 
 function Navbar(props) {
   return (
@@ -71,17 +73,24 @@ function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiFacebookCircleLine />
+        <Boop rotation={0} timing={200} scale={1.35}>
+          <RiFacebookCircleFill />
+        </Boop>
       </a>
       <a
         href="https://github.com/dorin-js"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <RiGithubLine />
+        <Boop rotation={0} timing={200} scale={1.35}>
+          <RiGithubFill />
+        </Boop>
       </a>
+
       <a className="email" href="mailto: dorin.ilusca@hotmail.com">
-        Send Email
+        <Boop rotation={0} timing={200} scale={1.35}>
+          <SiMinutemailer />
+        </Boop>
       </a>
     </footer>
   );
