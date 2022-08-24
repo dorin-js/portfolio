@@ -15,6 +15,7 @@ const MyComponent = forwardRef((props, ref) => (
     {props.children}
   </div>
 ));
+MyComponent.displayName = "MyComponent";
 
 function TechStack() {
   return (

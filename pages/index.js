@@ -16,7 +16,7 @@ function AnimatedCaretLink(props) {
     <Link href="/projects" className="flex">
       <a className="browse-pr inline-block" onMouseEnter={trigger}>
         <div style={{ width: "100%" }} className="flex">
-          <span>Browse my projects</span>{" "}
+          <span>Browse some of my projects</span>{" "}
           <animated.span className="inline-block" style={style}>
             <MdOutlineKeyboardArrowRight />
           </animated.span>
@@ -46,6 +46,7 @@ export default function Home() {
                 <RoughNotation
                   type="highlight"
                   iterations={1}
+                  animationDelay={850}
                   animationDuration={350}
                   color="rgba(10, 10, 10, 0.1)"
                   show={true}
@@ -57,7 +58,7 @@ export default function Home() {
                   type="highlight"
                   iterations={1}
                   color="rgba(10, 10, 10, 0.1)"
-                  animationDelay={450}
+                  animationDelay={1000}
                   animationDuration={350}
                   show={true}
                 >
@@ -68,7 +69,7 @@ export default function Home() {
                   type="highlight"
                   iterations={1}
                   color="rgba(10, 10, 10, 0.1)"
-                  animationDelay={900}
+                  animationDelay={1300}
                   animationDuration={350}
                   show={true}
                 >
@@ -79,7 +80,7 @@ export default function Home() {
                   type="highlight"
                   iterations={1}
                   color="rgba(10, 10, 10, 0.1)"
-                  animationDelay={1200}
+                  animationDelay={1600}
                   animationDuration={350}
                   show={true}
                 >

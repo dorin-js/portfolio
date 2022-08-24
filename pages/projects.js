@@ -26,7 +26,7 @@ function Projects() {
     },
     {
       title: "Ecommerce shop",
-      previewVid: "gmail-speed.mp4",
+      previewVid: "ecomm.mp4",
       links: {
         git: "https://github.com/dorin-js/react-ecommerce",
         live: "https://react-ecom-eight.vercel.app/",

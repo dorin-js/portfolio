@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { RiFacebookCircleFill } from "react-icons/ri";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { RiGithubLine } from "react-icons/ri";
 import { SiMinutemailer } from "react-icons/si";
 import { RiGithubFill } from "react-icons/ri";
-import { RiMoonLine } from "react-icons/ri";
-import { RiMoonFill } from "react-icons/ri";
 import { useRouter } from "next/router";
 import { RoughNotation } from "react-rough-notation";
 import Boop from "./Boop";
@@ -49,17 +45,9 @@ function Navbar(props) {
         </Link>
       </div>
       <div className="additional-menu">
-        <button
-          className="nav-socials"
-          onMouseEnter={() => {
-            props.setHovered(true);
-          }}
-          onMouseLeave={() => {
-            props.setHovered(false);
-          }}
-        >
-          {props.hovered ? <RiMoonFill /> : <RiMoonLine />}
-        </button>
+        {/* <button className="nav-add-color">
+          <AiOutlineBgColors />
+        </button> */}
       </div>
     </nav>
   );

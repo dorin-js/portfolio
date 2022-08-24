@@ -6,9 +6,9 @@ import { BsGithub } from "react-icons/bs";
 
 const Preview = ({ projects }) => {
   return (
-    <>
-      {projects.map((pr, id) => (
-        <div className="preview" key={pr.title + id}>
+    <React.Fragment>
+      {projects.map((pr) => (
+        <div className="preview" key={pr.title}>
           <div className="flex" style={{ marginBottom: "1.5rem" }}>
             <h2>{pr.title}</h2>
             <div className="flex" style={{ marginLeft: "auto" }}>
@@ -55,7 +55,7 @@ const Preview = ({ projects }) => {
           </ul>
         </div>
       ))}
-    </>
+    </React.Fragment>
   );
 };
 
