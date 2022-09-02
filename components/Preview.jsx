@@ -40,7 +40,7 @@ const Preview = ({ projects }) => {
               </span>
             </div>
           </div>
-          <video width="800" autoPlay={true} loop="true" muted>
+          <video width="800" autoPlay loop muted>
             <source src={`${pr.previewVid}`} type="video/mp4" />
           </video>
           <h3 style={{ margin: "1.2rem 0 0.8rem 0" }}>
