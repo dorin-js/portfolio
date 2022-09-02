@@ -83,11 +83,9 @@ h6 {
   border-radius: 5px;
   cursor: pointer;
 }
-.nav-socials {
+.nav-add-color {
   color: #444;
   font-size: 1.5rem;
-  /* background-color: rgb(234, 234, 234); */
-  /* border-radius: 5px; */
   padding: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -183,5 +181,8 @@ h6 {
   .profile-pic-wrap {
     order: -1;
     max-width: 100px;
+  }
+  .name {
+    font-size: 2rem;
   }
 }

@@ -7,7 +7,7 @@ function Projects() {
   const projects = [
     {
       title: "Snippets app",
-      previewVid: "snipp.mp4",
+      previewVid: "code-snipp.mp4",
       links: {
         git: "https://github.com/dorin-js/mycode-snippets",
         live: "https://mcsa.vercel.app/",

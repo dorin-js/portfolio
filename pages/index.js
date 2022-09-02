@@ -6,7 +6,7 @@ import { animated } from "react-spring";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import Layout from "../components/Layout";
-import ProfilePic from "../assets/profile_promo.jpeg";
+import ProfilePic from "../assets/profil1.jpg";
 import TechStack from "../components/TechStack";
 import useBoop from "../hooks/useBoop";
 
@@ -62,7 +62,7 @@ export default function Home() {
                   animationDuration={350}
                   show={true}
                 >
-                  building user interfaces.
+                  building user interfaces.{" "}
                 </RoughNotation>
                 Currently,{" "}
                 <RoughNotation
@@ -88,7 +88,10 @@ export default function Home() {
                 </RoughNotation>
               </p>
             </div>
-            <div className="profile-pic-wrap">
+            <div
+              className="profile-pic-wrap"
+              style={{ filter: "grayscale(100%)" }}
+            >
               <Image
                 className="profile-pic"
                 src={ProfilePic}
