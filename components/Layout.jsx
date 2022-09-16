@@ -38,7 +38,7 @@ function Navbar(props) {
             </RoughNotation>
           </a>
         </Link>
-        <Link href="/CV.pdf">
+        <Link href="/CV_En.pdf">
           <a className="nav-link" target="_blank">
             CV
           </a>
