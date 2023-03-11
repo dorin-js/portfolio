@@ -64,7 +64,7 @@ export default function Home() {
                 >
                   building user interfaces.{" "}
                 </RoughNotation>
-                Currently,{" "}
+                Currently, i position myself as a{" "}
                 <RoughNotation
                   type="highlight"
                   iterations={1}
@@ -73,9 +73,9 @@ export default function Home() {
                   animationDuration={350}
                   show={true}
                 >
-                  looking for a role
+                  Junior FrontEnd dev
                 </RoughNotation>{" "}
-                in established IT company with the opportunity to work with the{" "}
+                working with the{" "}
                 <RoughNotation
                   type="highlight"
                   iterations={1}
